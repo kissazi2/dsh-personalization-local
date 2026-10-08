@@ -1,0 +1,7 @@
+# dsh-personalization-local bundle patch：向 profile 注入个性化插件条目。
+# Node half（lib/index.mjs）按 Config（enabled / profile / chatPrefs…）
+# 组装 systemPrompt 个性化段；client half（lib/client.js）向设置页
+# settings.section 插槽注册「个性化」分区。
+- insert:
+    - id: personalization
+      name: dsh-personalization-local
