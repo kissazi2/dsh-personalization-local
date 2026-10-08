@@ -3,6 +3,7 @@
 <p align="center">DeepSeek Harness 个性化设置插件</p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/dsh-personalization-local"><img src="https://img.shields.io/npm/v/dsh-personalization-local?style=flat-square&logo=npm&label=npm" alt="npm version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-10b981?style=flat-square" alt="MIT license"></a>
   <a href="package.json"><img src="https://img.shields.io/node/v/dsh-personalization-local?style=flat-square&logo=node.js&label=node" alt="Node.js version"></a>
 </p>
@@ -27,11 +28,17 @@
 
 需要 DeepSeek Harness `0.2.0-rc.2`（插件基于该版本 Host 的 settings / systemPrompt / client slots 接口实现）。
 
-> **桌面版注意：** desktop profile 由应用独占管理，`dsh plugin add` 对该 profile 禁用，请走下方手工路径。
+```bash
+dsh plugin --profile web add dsh-personalization-local@latest
+```
+
+> **桌面版注意：** desktop profile 由应用独占管理，`dsh plugin add` 对该 profile 禁用，请走下方手工路径。代码完全一致，只是安装方式不同。
+
+**桌面版手工安装：**
 
 ```bash
 # 1. 把插件装进 desktop profile
-pnpm --dir ~/.dsh/profiles/desktop add "file:/path/to/dsh-personalization-local"
+pnpm --dir ~/.dsh/profiles/desktop add dsh-personalization-local
 
 # 2. 把包名追加进 bundles 清单（若尚未存在）
 node -e "
