@@ -1,13 +1,18 @@
 {
   "name": "dsh-personalization-local",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH 个性化设置插件：在「设置」页新增「个性化」分区，管理称呼/职业/自我介绍与 Chat 回复偏好，保存后注入到每个新对话的系统提示词。",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kissazi2/dsh-personalization-local.git"
+  },
   "type": "module",
   "main": "lib/index.mjs",
   "files": [
     "lib",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "docs/images"
   ],
   "exports": {
     ".": "./lib/index.mjs",
@@ -31,6 +36,9 @@
   },
   "scripts": {
     "test": "node --check lib/index.mjs && node --check lib/client.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "^3.18.4"
