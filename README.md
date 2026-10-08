@@ -10,8 +10,7 @@
 在 DSH **设置** 页新增「个性化」分区：配置称呼、职业与自我介绍、Chat 回复偏好，保存后自动注入到**每个新对话的系统提示词**中，让 AI 从第一句话起就按你的方式工作。
 
 <!--
-  截图占位：打开 DSH 设置 → 个性化，截图保存为 docs/images/settings-personalization.png
-  （删除本注释后下图自动生效）
+  截图：DSH 设置 → 个性化 分区（docs/images/settings-personalization.png）
 -->
 ![个性化设置分区](docs/images/settings-personalization.png)
 
@@ -50,14 +49,9 @@ console.log('bundles =', j.dsh.profile.bundles.join(', '));
 
 ## 使用
 
-1. 打开 **设置**，左侧导航出现「**个性化**」分区；
-2. 填写「关于你」与「Chat 回复偏好」，点击 **保存设置**；
+1. 打开 **设置**，左侧导航出现「**个性化**」分区（见上图）；
+2. 填写「关于你」与「Chat 回复偏好」，点击 **保存设置**，按钮旁会提示「已保存，对下个新对话生效」；
 3. **新开一个对话**，即可验证注入效果——例如问一句「你怎么称呼我」。
-
-| 步骤 | 界面 |
-|---|---|
-| 打开设置页，点击左侧「个性化」 | ![设置页导航](docs/images/settings-personalization.png) |
-| 填写并保存 | 保存后按钮旁提示「已保存，对下个新对话生效」 |
 
 ## 工作原理
 
